@@ -55,6 +55,7 @@ h2 {
     padding: 2rem;
     height: 280px;
     overflow: auto;
+    color: #fff;
 }
 
 @media (min-width:768px) {
