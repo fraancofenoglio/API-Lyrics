@@ -51,6 +51,7 @@ class API {
             if (respuesta.status !== 404) {
                 showLyrics(Lyrics);
                 showInfo(this.artista, this.cancion);
+                UI.formularioBuscar.reset();
                 
             } else {
                 error
@@ -60,6 +61,7 @@ class API {
         } catch (error) {
             UI.divMensajes.classList.add("error");
             UI.divMensajes.textContent = `Canción no encontrada.`;
+            UI.formularioBuscar.reset();
             cleanHTML();
             // UI.divResultado.textContent = "";
         }
