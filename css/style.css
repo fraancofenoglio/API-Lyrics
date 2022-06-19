@@ -1,0 +1,210 @@
+html{
+    min-height: 100%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    /* background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%); */
+    background: url(/assets/textura-madera-en-negro.jpg);
+    font-family: 'Montserrat', sans-serif;
+    /* min-height: 100%; */
+    height: 100vh;
+}
+h1 {
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+}
+h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #fff;
+    align-self:center;
+}
+
+
+.contenido {
+    /* background-color: white; */
+    max-width: 1100px;
+    margin:  0 auto;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.resultado {
+    background-color: rgba(240, 234, 234, 0.1);
+    border-radius: 5px;
+}
+
+.contenedor {
+    width: 100%;
+}
+
+#resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: pre-wrap;
+    padding: 2rem;
+    height: 280px;
+    overflow: auto;
+}
+
+@media (min-width:768px) {
+    .contenedor {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .contenedor > div {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        width: 50%;
+    }
+
+    #artista, #cancion {
+        width: 50%;
+    }
+
+    .input input[type="submit"] {
+        width: 50%;
+        height: 50px;
+    }
+
+    .buscar {
+        height: 400px;
+        /* margin-top: 20px; */
+    }
+
+    #resultado {
+        height: 415px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        overflow: auto;
+        float: center;
+        flex-wrap: wrap;
+        color: #fff;
+    }
+
+}
+.buscar p {
+    text-align: center;
+    color: #fff;
+}
+.buscar span {
+    color: red;
+}
+
+.input {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.input label {
+    color: #fff;
+    text-align: right;
+    margin: 2% 0% 2% 0%;
+    font-size: larger;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.input span {
+    color: red;
+}
+.input input[type="text"] {
+    height: 2.5rem;
+    padding: 1rem;
+    display: flex;
+    flex: 1;
+    width: 100%;
+    border-radius: 10px;
+}
+.enviar {
+    text-align: right;
+    justify-content: flex-end!important;
+}
+.input input[type="submit"]{
+    background-color: black;
+    padding: 1rem 4rem;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    /* transition: background-color .3s ease-in-out; */
+} 
+.input input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: rgb(35, 34, 34);
+}
+
+.error {
+    padding: 1rem;
+    border: 1px solid red;
+    background-color: rgb(249, 121, 121);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+
+}
+
+.lds-ripple div {
+    position: absolute;
+    border: 4px solid white;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+}
