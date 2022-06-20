@@ -7,10 +7,8 @@ html{
 }
 
 body {
-    /* background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%); */
     background: url(/assets/textura-madera-en-negro.jpg);
     font-family: 'Montserrat', sans-serif;
-    /* min-height: 100%; */
     height: 100vh;
 }
 h1 {
@@ -27,7 +25,6 @@ h2 {
 
 
 .contenido {
-    /* background-color: white; */
     max-width: 1100px;
     margin:  0 auto;
     height: 100%;
@@ -35,7 +32,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
 }
 
 .resultado {
@@ -53,7 +49,7 @@ h2 {
     align-items: center;
     white-space: pre-wrap;
     padding: 2rem;
-    height: 280px;
+    max-height: 280px;
     overflow: auto;
     color: #fff;
 }
@@ -68,7 +64,6 @@ h2 {
     .contenedor > div {
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
         width: 50%;
     }
 
@@ -81,24 +76,32 @@ h2 {
         height: 50px;
     }
 
+    label, input {
+        margin: 1% 0% 1% 0%;
+    }
+
     .buscar {
-        height: 400px;
-        /* margin-top: 20px; */
+        height: 440px;
     }
 
     #resultado {
-        height: 415px;
+        max-height: 400px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* justify-content: center; */
         overflow: auto;
         float: center;
         flex-wrap: wrap;
         color: #fff;
     }
 
+    .search {
+        margin: 0%;
+        font-size: 28px;
+    }
+
 }
+
 .buscar p {
     text-align: center;
     color: #fff;
@@ -142,7 +145,6 @@ h2 {
     color: white;
     border: none;
     border-radius: 10px;
-    /* transition: background-color .3s ease-in-out; */
 } 
 .input input[type="submit"]:hover {
     cursor: pointer;
@@ -156,7 +158,7 @@ h2 {
     color: white;
     text-align: center;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .lds-ripple {

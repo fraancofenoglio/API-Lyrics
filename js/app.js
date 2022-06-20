@@ -10,6 +10,8 @@ UI.formularioBuscar.addEventListener('submit', buscarCancion)
 function buscarCancion(e) {
     e.preventDefault()
 
+    cleanHTML();
+
     const artista = document.querySelector('#artista').value
     const cancion = document.querySelector('#cancion').value
 
