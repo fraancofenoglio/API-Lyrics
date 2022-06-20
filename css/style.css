@@ -68,11 +68,11 @@ h2 {
     }
 
     #artista, #cancion {
-        width: 50%;
+        width: 90%;
     }
 
     .input input[type="submit"] {
-        width: 50%;
+        width: 90%;
         height: 50px;
     }
 
@@ -111,6 +111,7 @@ h2 {
 }
 
 .input {
+
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
