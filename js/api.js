@@ -55,16 +55,14 @@ class API {
                 UI.formularioBuscar.reset();
 
             } else {
-                UI.divMensajes.classList.add("error");
-                UI.divMensajes.textContent = `Canción no encontrada.`;
-                UI.formularioBuscar.reset();
-                cleanHTML();
-                
+                throw new Error("Canción no encontrada.")
             }
-
-
+            
         } catch (error) {
-            console.error(error);
+            UI.divMensajes.classList.add("error");
+            UI.divMensajes.textContent = error;
+            UI.formularioBuscar.reset();
+            cleanHTML();
         }
     }
 }
